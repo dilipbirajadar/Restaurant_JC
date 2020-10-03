@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:elevation="2dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="2dp"
+        tools:style="@style/CardView">
+
+        <RelativeLayout
+            android:id="@+id/parent_rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            >
+
+            <ImageView
+                android:id="@+id/restaurant_logo"
+                android:layout_width="@dimen/margin_30"
+                android:layout_height="@dimen/margin_30"
+                android:scaleType="fitXY"
+                android:src="@drawable/reestuarnats"
+                android:contentDescription="logo" />
+
+            <TextView
+                android:id="@+id/restaurant_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_2"
+                android:layout_toRightOf="@+id/restaurant_logo"
+                android:paddingLeft="@dimen/margin_4"
+                android:text="Radisson Blue"
+                android:maxLines="2"
+                android:ems="2"
+                android:lines="2"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/dark_gray"
+                android:importantForAccessibility="no"/>
+
+            <ImageView
+                android:id="@+id/restaurant_address_logo"
+                android:layout_width="@dimen/margin_30"
+                android:layout_height="@dimen/margin_30"
+                android:layout_marginTop="15dp"
+                android:scaleType="fitXY"
+                android:layout_below="@+id/restaurant_logo"
+                android:src="@drawable/address"
+                />
+
+            <TextView
+                android:id="@+id/restaurant_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_2"
+                android:layout_below="@+id/restaurant_name"
+                android:layout_toRightOf="@+id/restaurant_address_logo"
+                android:paddingLeft="@dimen/margin_4"
+                android:text="Radisson Blue Pune Hinjewadi Pune 411057."
+                android:maxLines="2"
+                android:ems="2"
+                android:lines="2"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@color/dark_gray"
+                android:importantForAccessibility="no"/>
+
+            <ImageView
+                android:id="@+id/restaurant_review_logo"
+                android:layout_width="@dimen/margin_24"
+                android:layout_height="@dimen/margin_24"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitXY"
+                android:layout_below="@+id/restaurant_address_logo"
+                android:src="@drawable/star"/>
+            <TextView
+                android:id="@+id/restaurant_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/margin_4"
+                android:layout_marginTop="5dp"
+                android:text="4.5 *"
+                android:layout_toRightOf="@+id/restaurant_review_logo"
+                android:layout_below="@+id/restaurant_address"/>
+
+            <ImageView
+                android:id="@+id/restaurant_distance_logo"
+                android:layout_width="@dimen/margin_24"
+                android:layout_height="@dimen/margin_24"
+                android:layout_toRightOf="@+id/restaurant_review"
+                android:layout_marginLeft="@dimen/margin_90"
+                android:layout_below="@+id/restaurant_address"
+                android:layout_marginTop="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/miles"
+                />
+
+            <TextView
+                android:id="@+id/restaurant_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=" 5 Km"
+                android:layout_toRightOf="@+id/restaurant_distance_logo"
+                android:layout_below="@+id/restaurant_address"/>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

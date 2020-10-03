@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Restaurant Near Me</string>
+    <string name="tab_text_1">Restaurant List</string>
+    <string name="tab_text_2">Restaurant Location </string>
+    <string name="dashboard">Dashboard</string>
+    <string name="apply_filter">Apply filter</string>
+    <string name="no">No</string>
+    <string name="apply">Apply</string>
+    <string name="confirmation_msg">Are you sure want to apply</string>
+
+</resources>
