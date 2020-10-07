@@ -71,6 +71,8 @@ public class RestaurantFragment extends Fragment {
         restaurantViewModel.getRestaurantRepository().observe(this, restaurantResponse -> {
             List<Result> resultList = restaurantResponse.getResults();
             resultArrayList.addAll(resultList);
+            Collections.sort ( resultArrayList , new MileFromDeviceComp () );
+            Collections.reverse(resultArrayList);
             itemRecyclerViewAdapter.notifyDataSetChanged();
         });
 
@@ -89,7 +91,6 @@ public class RestaurantFragment extends Fragment {
 
     private void setAdapter() {
         if (itemRecyclerViewAdapter == null) {
-            Collections.sort ( resultArrayList , new MileFromDeviceComp () );
             itemRecyclerViewAdapter = new RestaurantItemRecyclerViewAdapter(getActivity(), resultArrayList);
             recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
             recyclerView.setAdapter(itemRecyclerViewAdapter);
@@ -109,6 +110,18 @@ public class RestaurantFragment extends Fragment {
     class MileFromDeviceComp implements Comparator<Result> {
         @Override
         public int compare(Result e1 , Result e2) {
+            if(e1.getRating() == null && e2.getRating() == null ){
+              return  -1;
+            }
+
+            if(e1.getRating() == null && e2.getRating() != null ){
+                return  -1;
+            }
+
+            if(e1.getRating() != null && e2.getRating() == null ){
+                return  1;
+            }
+
             if (e1.getRating() > e2.getRating ()) {
                 return 1;
             } else {
@@ -116,4 +129,6 @@ public class RestaurantFragment extends Fragment {
             }
         }
     }
+
+
 }
