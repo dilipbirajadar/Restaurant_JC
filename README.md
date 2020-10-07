@@ -1,20 +1,21 @@
 # Restaurant_JC
-This app is fetching the near by restaurants and display the restaurants in list and also display marker info of the restaurant.
+This application shows near by restaurant list accourding to your current location within 5 km distance.
+And also you can see restaurants location on Map with the hepl of marker.
 
 
 # Overview
+Restaurant Near Me applicaion does the following:
 
-Restaurant Near Me app does the following:
-
-This application basically uses the google place api for the fecth the near by restaurants
-App having 3 pages(Splash screen, Dashboard, and Map Location for the marker) and 2 dialogs(filter dialog and marker short info) and other comman utilities.
+This application basically uses the google place API to fetch the near by restaurants.
+This application is having 3 pages(Splash screen, Dashboard, and Map Location for the marker) and 2 dialogs(filter dialog and marker short info) 
+and other comman utilities.
 # To achieve this, 
- - Designe Recycle view for the display list of restaurants
  - Designed three pages
- - Design the map for the add marker on the map.
- - Used the retrofit for network call.
+ - Designed Recycle view for the display list of restaurants
+ - Designed map to add the marker on the map.
+ - Used retrofit for network call.
 
-# Once application launch it open the splah screen and ask for permissoion.
+# Once application gets launch, it will open the splah screen and ask for location permission.
 - capture location
 
 
@@ -27,19 +28,19 @@ App having 3 pages(Splash screen, Dashboard, and Map Location for the marker) an
 
 # Restaurant list fragment
 
-- Responsible for open fetch data from network and set data into recycle view.
+- Responsible for fetch data from network and set data into recycle view.
 
 # Restaurant list location
 
-- Responsible for the add marker on the map and once click of any marker it will display short info about that restaurant.
+- Responsible for the add marker on the map and once you click on any marker it will display short info about that restaurant.
 
 # ViewModel and Live data used.
 
 # Filter 
 
-- Filter Button on the dashboard select any of them(Km,Mile) and apply and scroll list you will see the data respetivly Km or Mile.  
+- Filter Button used on the dashboard to get the restaurant list according to kilometer or Mile and it will apply on list only when you scroll the screen.  
 
 
 # For Test App
-Clone or Download from this repo.
+Clone or Download this repo.
 Open downlaoded project in android studio and just run.
